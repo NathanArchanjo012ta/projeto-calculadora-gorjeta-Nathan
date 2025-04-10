@@ -15,6 +15,7 @@
     --sherpa-blue: #00474b;
     --topaz: #26c2ae;
     --regent-grey: #7f9d9f;
+    --water-leaf: #9febdf;
 }
 
 body {
@@ -91,9 +92,15 @@ main {
             padding-block: .6rem;
             font-weight: 700;
         }
+        button:hover {
+            background: var(--water-leaf);
+            cursor: pointer;
+            transition: .3s;
+        }
         .button-selected{
             background: var(--topaz);
         }
+
 
         
 
@@ -161,24 +168,44 @@ main {
             font-weight: 700;
             padding-block: .9rem;
         }
+        button:hover {
+            background: var(--water-leaf);
+            cursor: pointer;
+            transition: .3s;
+        }
     }
     
     input::-webkit-inner-spin-button,
-        input::-webkit-outer-spin-button{
-            display: none;
-        }
-    
+    input::-webkit-outer-spin-button{
+        display: none;
+    }
+
     @media(min-width: 920px) {
         main {
             display: flex;
             max-width: 92rem;
             margin-inline: auto;
             border-radius: 2.5rem;
-            gap: 4.8rem;
             padding: 4.8rem;
+            gap: 4.8rem;
+            
         }
     
         section {
             width: 100%;
         }
+        
+        .info .tip div {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .results {
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between ;
+            .amount strong,
+            .total strong{
+                font-size: 4.8rem;
+            }
 
+        }
